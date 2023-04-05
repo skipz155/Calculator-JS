@@ -1,0 +1,76 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	//variables
+	$primary-color: #575757;
+	$secondary-color: #363636;
+	$filter-white: invert(100%) sepia(1%) saturate(0%) hue-rotate(29deg)
+		brightness(102%) contrast(101%);
+
+	//mixins
+	@mixin icons {
+		width: 25px;
+		height: 25px;
+		margin-right: 1em;
+		padding-left: 0.4em;
+		filter: $filter-white;
+	}
+
+	//global body changes
+	margin: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+
+	nav {
+		display: flex;
+		padding: 0.5em;
+		background-color: $primary-color;
+		align-items: center;
+		justify-content: flex-start;
+		max-width: 400px;
+		border: 2px solid rgb(255, 255, 255);
+		border-radius: 6px 6px 0 0;
+
+		img {
+			@include icons;
+		}
+	}
+	section.screen {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		background-color: $secondary-color;
+		max-width: 400px;
+		padding: 0.5em;
+		border: 2px solid rgb(255, 255, 255);
+		border-top: 1px;
+
+		div.mini-nav {
+			display: flex;
+			width: 100%;
+			align-items: center;
+		}
+
+		img {
+			@include icons;
+			cursor: pointer;
+		}
+
+		div.result-container {
+			display: flex;
+			height: 80px;
+			justify-content: flex-end;
+			align-items: flex-end;
+
+			h1.result {
+				padding: 0.2em 0.4em;
+				font-size: 2em;
+			}
+		}
+	}
+	section.buttons {
+	}
+}
