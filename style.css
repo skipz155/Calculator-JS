@@ -7,16 +7,17 @@ body {
   margin: 1em;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  min-width: 400px;
 }
 body nav {
   display: flex;
-  padding: 0.5em;
   background-color: #575757;
   align-items: center;
   justify-content: flex-start;
+  border-radius: 6px 6px 0 0;
   max-width: 400px;
   border: 2px solid rgb(255, 255, 255);
-  border-radius: 6px 6px 0 0;
+  padding: 0.5em;
 }
 body nav img {
   width: 25px;
@@ -31,8 +32,8 @@ body section.screen {
   justify-content: flex-start;
   background-color: #363636;
   max-width: 400px;
-  padding: 0.5em;
   border: 2px solid rgb(255, 255, 255);
+  padding: 0.5em;
   border-top: 1px;
 }
 body section.screen div.mini-nav {
@@ -48,6 +49,10 @@ body section.screen img {
   filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(29deg) brightness(102%) contrast(101%);
   cursor: pointer;
 }
+body section.screen img:hover,
+body section.screen img :active {
+  transform: scaleX(75%);
+}
 body section.screen div.result-container {
   display: flex;
   height: 80px;
@@ -57,4 +62,89 @@ body section.screen div.result-container {
 body section.screen div.result-container h1.result {
   padding: 0.2em 0.4em;
   font-size: 2em;
+}
+body section.buttons {
+  display: flex;
+  flex-direction: column;
+  background-color: #363636;
+  max-width: 400px;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 0.5em;
+  border-top: 1px;
+  border-radius: 0 0 6px 6px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+body section.buttons div.numbers--operators-container {
+  display: flex;
+}
+body section.buttons div.numbers--operators-container main.numbers {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+body section.buttons div.numbers--operators-container main.numbers div {
+  display: flex;
+  background-color: #575757;
+  margin: 2px;
+  border: 1px solid #363636;
+  border-radius: 10px;
+  width: 96px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+body section.buttons div.numbers--operators-container main.numbers div:hover {
+  filter: brightness(0.8);
+}
+body section.buttons div.numbers--operators-container main.numbers div:active {
+  /* Darken on click */
+  filter: brightness(0.6);
+}
+body section.buttons div.numbers--operators-container aside.operators {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+body section.buttons div.numbers--operators-container aside.operators div {
+  display: flex;
+  background-color: #575757;
+  margin: 2px;
+  border: 1px solid #363636;
+  border-radius: 10px;
+  width: 96px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+body section.buttons div.numbers--operators-container aside.operators div:hover {
+  filter: brightness(0.8);
+}
+body section.buttons div.numbers--operators-container aside.operators div:active {
+  /* Darken on click */
+  filter: brightness(0.6);
+}
+body section.buttons div.equals {
+  display: flex;
+  background-color: #575757;
+  margin: 2px;
+  border: 1px solid #363636;
+  border-radius: 10px;
+  width: 96px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  width: 48.7%;
+  background-color: rgb(12, 109, 12);
+}
+body section.buttons div.equals:hover {
+  filter: brightness(0.8);
+}
+body section.buttons div.equals:active {
+  /* Darken on click */
+  filter: brightness(0.6);
 }/*# sourceMappingURL=style.css.map */

@@ -19,20 +19,47 @@ body {
 		filter: $filter-white;
 	}
 
+	@mixin sections {
+		max-width: 400px;
+		border: 2px solid rgb(255, 255, 255);
+		padding: 0.5em;
+	}
+
+	@mixin button {
+		display: flex;
+		background-color: $primary-color;
+		margin: 2px;
+		border: 1px solid $secondary-color;
+		border-radius: 10px;
+		width: 96px;
+		height: 70px;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.5em;
+		cursor: pointer;
+
+		&:hover {
+			filter: brightness(0.8);
+		}
+		&:active {
+			/* Darken on click */
+			filter: brightness(0.6);
+		}
+	}
+
 	//global body changes
 	margin: 1em;
 	font-family: Arial, Helvetica, sans-serif;
 	color: white;
+	min-width: 400px;
 
 	nav {
 		display: flex;
-		padding: 0.5em;
 		background-color: $primary-color;
 		align-items: center;
 		justify-content: flex-start;
-		max-width: 400px;
-		border: 2px solid rgb(255, 255, 255);
 		border-radius: 6px 6px 0 0;
+		@include sections;
 
 		img {
 			@include icons;
@@ -43,9 +70,7 @@ body {
 		flex-direction: column;
 		justify-content: flex-start;
 		background-color: $secondary-color;
-		max-width: 400px;
-		padding: 0.5em;
-		border: 2px solid rgb(255, 255, 255);
+		@include sections;
 		border-top: 1px;
 
 		div.mini-nav {
@@ -57,6 +82,10 @@ body {
 		img {
 			@include icons;
 			cursor: pointer;
+			&:hover,
+			:active {
+				transform: scaleX(75%);
+			}
 		}
 
 		div.result-container {
@@ -72,5 +101,38 @@ body {
 		}
 	}
 	section.buttons {
+		display: flex;
+		flex-direction: column;
+		background-color: $secondary-color;
+		@include sections;
+		border-top: 1px;
+		border-radius: 0 0 6px 6px;
+		justify-content: flex-end;
+		align-items: flex-end;
+
+		div.numbers--operators-container {
+			display: flex;
+			main.numbers {
+				display: grid;
+				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+
+				div {
+					@include button;
+				}
+			}
+			aside.operators {
+				display: grid;
+				grid-template-columns: minmax(0, 1fr);
+
+				div {
+					@include button;
+				}
+			}
+		}
+		div.equals {
+			@include button;
+			width: 48.7%;
+			background-color: rgb(12, 109, 12);
+		}
 	}
 }
