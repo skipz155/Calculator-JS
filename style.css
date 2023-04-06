@@ -55,13 +55,14 @@ body section.screen img :active {
 }
 body section.screen div.result-container {
   display: flex;
+  flex-direction: column;
   height: 80px;
   justify-content: flex-end;
   align-items: flex-end;
 }
-body section.screen div.result-container h1.result {
+body section.screen div.result-container h1 {
   padding: 0.2em 0.4em;
-  font-size: 2em;
+  font-size: 1.7em;
 }
 body section.buttons {
   display: flex;
