@@ -126,7 +126,10 @@ body section.buttons div.numbers--operators-container aside.operators div:active
   /* Darken on click */
   filter: brightness(0.6);
 }
-body section.buttons div.equals {
+body section.buttons div.bottom-container {
+  display: flex;
+}
+body section.buttons div.bottom-container div.equals {
   display: flex;
   background-color: #575757;
   margin: 2px;
@@ -138,13 +141,33 @@ body section.buttons div.equals {
   align-items: center;
   font-size: 1.5em;
   cursor: pointer;
-  width: 48.7%;
   background-color: rgb(12, 109, 12);
 }
-body section.buttons div.equals:hover {
+body section.buttons div.bottom-container div.equals:hover {
   filter: brightness(0.8);
 }
-body section.buttons div.equals:active {
+body section.buttons div.bottom-container div.equals:active {
+  /* Darken on click */
+  filter: brightness(0.6);
+}
+body section.buttons div.bottom-container div.cancel {
+  display: flex;
+  background-color: #575757;
+  margin: 2px;
+  border: 1px solid #363636;
+  border-radius: 10px;
+  width: 96px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  background-color: rgb(109, 12, 12);
+}
+body section.buttons div.bottom-container div.cancel:hover {
+  filter: brightness(0.8);
+}
+body section.buttons div.bottom-container div.cancel:active {
   /* Darken on click */
   filter: brightness(0.6);
 }/*# sourceMappingURL=style.css.map */

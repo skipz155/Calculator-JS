@@ -129,10 +129,19 @@ body {
 				}
 			}
 		}
-		div.equals {
-			@include button;
-			width: 48.7%;
-			background-color: rgb(12, 109, 12);
+
+		div.bottom-container {
+			display: flex;
+			div.equals {
+				@include button;
+				//width: 48.7%;
+				background-color: rgb(12, 109, 12);
+			}
+			div.cancel {
+				@include button;
+				//width: 48.7%;
+				background-color: rgb(109, 12, 12);
+			}
 		}
 	}
 }
